@@ -6,7 +6,6 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
@@ -16,6 +15,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
+import Hidden from "@mui/material/Hidden";
 
 const logoStyle = {
   width: "140px",
@@ -24,6 +24,8 @@ const logoStyle = {
 };
 
 function AppAppBar({ mode, toggleColorMode }) {
+  const initialsColors = ["info", "primary.light", "success.light"];
+
   return (
     <div>
       <AppBar
@@ -63,7 +65,6 @@ function AppAppBar({ mode, toggleColorMode }) {
                 flexGrow: 1,
                 display: "flex",
                 alignItems: "center",
-
                 px: 0,
               }}
             >
@@ -77,28 +78,46 @@ function AppAppBar({ mode, toggleColorMode }) {
                   textAlign: "self-start",
                 }}
               >
-                Agustín
-                <Typography
-                  component="span"
-                  variant="h6"
-                  sx={{
-                    color: (theme) =>
-                      theme.palette.mode === "light"
-                        ? "primary.main"
-                        : "primary.light",
-                  }}
-                >
-                  González
-                </Typography>
-                <Typography
-                  component="span"
-                  variant="h6"
-                  sx={{
-                    color: "success.light",
-                  }}
-                >
-                  Ribas
-                </Typography>
+                <Hidden smUp>
+                  {/* Mostrar solo las iniciales en pantallas más pequeñas que 'md' */}
+                  {["A", "G", "R"].map((letter, index) => (
+                    <Typography
+                      key={index}
+                      component="span"
+                      variant="h6"
+                      sx={{
+                        color: initialsColors[index],
+                      }}
+                    >
+                      {letter}
+                    </Typography>
+                  ))}
+                </Hidden>
+                <Hidden smDown>
+                  {/* Mostrar el nombre completo en pantallas 'md' y más grandes */}
+                  Agustín
+                  <Typography
+                    component="span"
+                    variant="h6"
+                    sx={{
+                      color: (theme) =>
+                        theme.palette.mode === "light"
+                          ? "primary.main"
+                          : "primary.light",
+                    }}
+                  >
+                    González
+                  </Typography>
+                  <Typography
+                    component="span"
+                    variant="h6"
+                    sx={{
+                      color: "success.light",
+                    }}
+                  >
+                    Ribas
+                  </Typography>
+                </Hidden>
               </Typography>
             </Box>
             <Box

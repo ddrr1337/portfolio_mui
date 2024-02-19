@@ -103,7 +103,7 @@ export default function Hero() {
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: "self-end",
-            height: { xs: 200, sm: 420 },
+            height: 420,
             width: { xs: "100%", sm: "45%" },
             backgroundImage: `url("/images/parquecar_hero.jpg")`,
             backgroundSize: "cover",
