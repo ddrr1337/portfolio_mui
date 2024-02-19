@@ -60,6 +60,8 @@ export default function Skills() {
             component="h1"
             variant="h1"
             sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
               alignSelf: "center",
               textAlign: "center",
             }}
