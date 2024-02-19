@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
 import { FaEthereum } from "react-icons/fa";
+import { AutoAwesome } from "@mui/icons-material";
 
 const items = [
   {
@@ -52,16 +53,17 @@ export default function Skills() {
       >
         <Box
           sx={{
-            width: { xs: "100%", md: "60%" },
-            textAlign: { xs: "center", sm: "left", md: "center" },
+            width: { xs: "100%", md: "45%" },
+            textAlign: "center",
           }}
         >
           <Typography
-            component="h1"
+            component="body1"
             variant="h1"
             sx={{
               display: "flex",
-              flexDirection: { xs: "column", md: "row" },
+              flexDirection: { xs: "column", lg: "row" },
+
               alignSelf: "center",
               textAlign: "center",
             }}
