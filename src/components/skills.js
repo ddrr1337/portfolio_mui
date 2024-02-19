@@ -52,8 +52,8 @@ export default function Skills() {
       >
         <Box
           sx={{
-            width: { sm: "100%", md: "60%" },
-            textAlign: { sm: "left", md: "center" },
+            width: { xs: "100%", md: "60%" },
+            textAlign: { xs: "center", sm: "left", md: "center" },
           }}
         >
           <Typography

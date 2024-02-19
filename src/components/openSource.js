@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import { useTheme } from "@mui/system";
 import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -29,8 +28,6 @@ const openSourceData = [
 ];
 
 export default function OpenSource() {
-  const theme = useTheme();
-
   return (
     <Container
       id="testimonials"
@@ -39,7 +36,7 @@ export default function OpenSource() {
         pb: { xs: 8, sm: 16 },
         position: "relative",
         display: "flex",
-        flexDirection: "row",
+        flexDirection: { xs: "column", sm: "row" },
         alignItems: "center",
         gap: { xs: 3, sm: 6 },
       }}
@@ -56,7 +53,6 @@ export default function OpenSource() {
         <Typography variant="body1" color="text.secondary">
           Check my contributions to Open Source Community
         </Typography>
-
         <Link href="https://github.com/ddrr1337" target="_blank">
           https://github.com/ddrr1337
         </Link>
