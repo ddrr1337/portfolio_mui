@@ -115,13 +115,11 @@ export default function Portfolio() {
           >
             <Box
               sx={{
-                backgroundImage: (theme) =>
-                  theme.palette.mode === "light"
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                backgroundImage: `url("/images/${items[selectedItemIndex].image}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 minHeight: 280,
+                marginBottom: 3,
               }}
             />
             <Box sx={{ px: 2, pb: 2 }}>
@@ -140,6 +138,8 @@ export default function Portfolio() {
                 {selectedFeature.description}
               </Typography>
               <Link
+                href={items[selectedItemIndex].link} // Agrega el atributo 'href' al enlace
+                target="_blank" // Abre el enlace en una nueva pestaña
                 color="primary"
                 variant="body2"
                 fontWeight="bold"
@@ -150,7 +150,7 @@ export default function Portfolio() {
                   "&:hover > svg": { transform: "translateX(2px)" },
                 }}
               >
-                <span>Learn more</span>
+                <span>{items[selectedItemIndex].link}</span>
                 <ChevronRightRoundedIcon
                   fontSize="small"
                   sx={{ mt: "1px", ml: "2px" }}
