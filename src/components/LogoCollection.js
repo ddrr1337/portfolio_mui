@@ -12,7 +12,7 @@ const darkLogos = [
   "redux.png",
   "python.png",
   "django.png",
-  "keras.png",
+  "Keras.png",
   "solidity.svg",
   "eth.png",
   "ubuntu.png",
