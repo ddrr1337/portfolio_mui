@@ -36,7 +36,7 @@ export default function OpenSource() {
         pb: { xs: 8, sm: 16 },
         position: "relative",
         display: "flex",
-        flexDirection: { sm: "column", md: "row" },
+        flexDirection: { xs: "column", sm: "row" },
         alignItems: "center",
         gap: { xs: 3, sm: 6 },
       }}
