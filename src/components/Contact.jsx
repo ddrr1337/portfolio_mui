@@ -55,7 +55,7 @@ function Contact() {
   };
 
   return (
-    <Container>
+    <Container id="contact">
       <Grid container spacing={6}>
         <Grid item xs={12} md={8}>
           <Box display="flex" flexDirection="column" alignItems="center">

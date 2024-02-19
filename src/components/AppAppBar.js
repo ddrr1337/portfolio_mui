@@ -18,6 +18,21 @@ import { useTheme } from "@mui/system";
 function AppAppBar({ mode, toggleColorMode }) {
   const initialsColors = ["info", "primary.light", "success.light"];
   const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    const offset = 128;
+    if (sectionElement) {
+      const targetScroll = sectionElement.offsetTop - offset;
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({
+        top: targetScroll,
+        behavior: "smooth",
+      });
+      setOpen(false);
+    }
+  };
 
   return (
     <div>
@@ -38,7 +53,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               alignItems: "center",
               justifyContent: "space-between",
               flexShrink: 0,
-              borderRadius: "999px",
+              borderRadius: "15px",
               bgcolor:
                 theme.palette.mode === "light"
                   ? "rgba(255, 255, 255, 0.4)"
@@ -137,12 +152,11 @@ function AppAppBar({ mode, toggleColorMode }) {
               </Link>
 
               <Button
+                onClick={() => scrollToSection("contact")}
                 color="primary"
                 variant="contained"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
-                target="_blank"
                 sx={{
                   marginLeft: { xs: 1, sm: 5 },
                 }}
