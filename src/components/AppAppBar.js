@@ -16,15 +16,11 @@ import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
 import Hidden from "@mui/material/Hidden";
-
-const logoStyle = {
-  width: "140px",
-  height: "auto",
-  cursor: "pointer",
-};
+import { useTheme } from "@mui/system";
 
 function AppAppBar({ mode, toggleColorMode }) {
   const initialsColors = ["info", "primary.light", "success.light"];
+  const theme = useTheme();
 
   return (
     <div>
@@ -150,7 +146,9 @@ function AppAppBar({ mode, toggleColorMode }) {
                 component="a"
                 href="/material-ui/getting-started/templates/sign-up/"
                 target="_blank"
-                sx={{ marginLeft: 8 }}
+                sx={{
+                  marginLeft: { xs: 1, sm: 5 },
+                }}
               >
                 Contact
               </Button>
