@@ -25,50 +25,16 @@ export default function Hero() {
       <Container
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", sm: "row" }, // Ajuste en la dirección del flexDirection
+          flexDirection: { xs: "column", sm: "row" },
           alignItems: "center",
           pt: { xs: 14, sm: 20 },
           pb: { xs: 8, sm: 12 },
         }}
       >
-        {/* Texto a la izquierda del Box */}
         <Stack
           spacing={2}
           sx={{ width: { xs: "100%", sm: "50%" }, mr: { xs: 0, sm: 5 } }}
         >
-          <Typography
-            component="h1"
-            variant="h5"
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              alignSelf: "self-start",
-              textAlign: "self-start",
-            }}
-          >
-            Agustín
-            <Typography
-              component="span"
-              variant="h5"
-              sx={{
-                color: (theme) =>
-                  theme.palette.mode === "light"
-                    ? "primary.main"
-                    : "primary.light",
-              }}
-            >
-              González
-            </Typography>
-            <Typography
-              component="span"
-              variant="h5"
-              sx={{
-                color: "success.light",
-              }}
-            >
-              Ribas
-            </Typography>
-          </Typography>
           <Typography
             component="h1"
             variant="h1"

@@ -39,7 +39,7 @@ function Contact() {
   const sendEmail = (e) => {
     setLoading(true);
     e.preventDefault();
-    fetch(`http://localhost:8001/api/contact/`, {
+    fetch(`https://api.parqeucar.app/api/contact/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
