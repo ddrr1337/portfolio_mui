@@ -18,7 +18,7 @@ const logoStyle = {
 
 const items = [
   {
-    icon: "parquecar.jpg",
+    icon: "parquecar.png",
     title: "ParqueCar App",
     description:
       "ParqueCar is a marketplace to find and sell your parking space in an easy and straightforward way.",
@@ -26,7 +26,7 @@ const items = [
     link: "https://parquecar.app",
   },
   {
-    icon: "puzzle.jpg",
+    icon: "puzzle.png",
     title: "Puzzle Housing",
     description:
       "Puzzle Housing is a real estate investment where you can divide your investments into multiple properties",
@@ -34,7 +34,7 @@ const items = [
     link: "https://puzzle-housing.com",
   },
   {
-    icon: "dividend.jpg",
+    icon: "dividend.png",
     title: "Dividend Labs",
     description:
       "Dividend Labs is a financial tool for dividend investment strategy. Uncover the power of passive returns.",
